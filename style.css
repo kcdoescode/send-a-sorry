@@ -1,0 +1,88 @@
+body {
+  font-family: 'Comfortaa', cursive;
+  background: linear-gradient(to bottom, #dceeff, #f1f9ff); /* pastel blue gradient */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #49759c;
+}
+
+#subText {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #2b2d42;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #b0dffb;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #003b73;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#tulipArea {
+  font-size: 2rem;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Floating petals animation */
+@keyframes float {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.petal {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: float 5s linear infinite;
+  pointer-events: none;
+}
+
+/* Pop-up box */
+#popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0f6;
+  padding: 30px 40px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  color: #0f52ba;
+  box-shadow: 0 30px rgba(255, 140, 200, 0.3);
+  z-index: 999;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
