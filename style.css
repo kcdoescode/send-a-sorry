@@ -68,21 +68,46 @@ button:hover {
 }
 
 /* Pop-up box */
+/* Pop-up box with animation */
 #popup {
   position: fixed;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff0f6;
+  background: #e0f3ff; /* pastel blue */
   padding: 30px 40px;
   border-radius: 20px;
   font-size: 1.5rem;
   color: #0f52ba;
-  box-shadow: 0 30px rgba(255, 140, 200, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
   z-index: 999;
   display: none;
+  opacity: 0;
+  animation: popupFade 0.5s ease forwards, popupPulse 3s ease-in-out infinite;
 }
 
 .hidden {
   display: none;
+}
+
+/* Fade in */
+@keyframes popupFade {
+  from {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Soft pulse effect */
+@keyframes popupPulse {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(0, 102, 255, 0.35);
+  }
 }
