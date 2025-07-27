@@ -10,9 +10,9 @@ madBtn.addEventListener('click', () => {
 
 forgiveBtn.addEventListener('click', () => {
   document.getElementById('mainText').textContent =
-    "woahhhh! thank god, you look really hot when you're mad... but not at ME 😉😬";
+    "woahhh! Thank god, see i might not be call person, but i can do THIS 😉😬";
   document.getElementById('subText').textContent =
-    "Now that you've finally forgiven me, can we get back to gossip? 😇✨";
+    "Can we get back to gossip now, i miss you! 😇✨";
   showPopup();
   for (let i = 0; i < 10; i++) createPetal();
 });
